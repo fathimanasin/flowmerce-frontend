@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 export default function FlowmerceDashboard() {
   const [page, setPage] = useState('login');
   const [token, setToken] = useState(localStorage.getItem('flowmerce_token') || '');
